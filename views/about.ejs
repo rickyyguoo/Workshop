@@ -1,19 +1,397 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="static/font-awesome.min.css">
-    <link href="static/font-awesome.min.css" rel="stylesheet">
-	<link href="static/WEB.css" rel="stylesheet">
-	<link href="static/index.css" rel="stylesheet">
-	<script src="static/jquery-1.12.4.min.js"></script>
-	<script src="static/wb.panel.min.js"></script>
-	<script src="static/jquery-ui.min.js"></script>
-	<script src="static/wb.newsviewer.min.js"></script>
-	<script src="static/wwb12.min.js"></script>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+
+<link href="static/font-awesome.min.css" rel="stylesheet">
+<link href="static/about.css" rel="stylesheet">
+<link href="static/about.css" rel="stylesheet">
+   <script src="static/jquery-1.12.4.min.js"></script>
+   <script src="static/wb.panel.min.js"></script>
+   <script src="static/jquery-ui.min.js"></script>
+   <script src="static/wb.newsviewer.min.js"></script>
+   <script src="static/wwb12.min.js"></script>
+   <script src="static/jquery-1.12.4.min.js"></script>
+   <script src="static/wb.panel.min.js"></script>
+   <script src="static/wwb12.min.js"></script>
+   <script>   
+   $(document).ready(function()
+   {
+      $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'right', toggle: true, overlay: true});
+      function Image1Scroll()
+      {
+         var $obj = $("#wb_Image1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-in-up', 500, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image1').inViewPort(true))
+      {
+         $('#wb_Image1').addClass("in-viewport");
+      }
+      Image1Scroll();
+      $(window).scroll(function(event)
+      {
+         Image1Scroll();
+      });
+      function Heading2Scroll()
+      {
+         var $obj = $("#wb_Heading2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('Name3', 'transform-scale-in', 100, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('Name3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Heading2').inViewPort(true))
+      {
+         $('#wb_Heading2').addClass("in-viewport");
+      }
+      Heading2Scroll();
+      $(window).scroll(function(event)
+      {
+         Heading2Scroll();
+      });
+      function Image2Scroll()
+      {
+         var $obj = $("#wb_Image2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-in-up', 500, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image2').inViewPort(true))
+      {
+         $('#wb_Image2').addClass("in-viewport");
+      }
+      Image2Scroll();
+      $(window).scroll(function(event)
+      {
+         Image2Scroll();
+      });
+      function Image3Scroll()
+      {
+         var $obj = $("#wb_Image3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-in-up', 500, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image3').inViewPort(true))
+      {
+         $('#wb_Image3').addClass("in-viewport");
+      }
+      Image3Scroll();
+      $(window).scroll(function(event)
+      {
+         Image3Scroll();
+      });
+      function Heading3Scroll()
+      {
+         var $obj = $("#wb_Heading3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('Name3', 'transform-scale-in', 100, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('Name3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Heading3').inViewPort(true))
+      {
+         $('#wb_Heading3').addClass("in-viewport");
+      }
+      Heading3Scroll();
+      $(window).scroll(function(event)
+      {
+         Heading3Scroll();
+      });
+      function Heading4Scroll()
+      {
+         var $obj = $("#wb_Heading4");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('Name3', 'transform-scale-in', 100, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('Name3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Heading4').inViewPort(true))
+      {
+         $('#wb_Heading4').addClass("in-viewport");
+      }
+      Heading4Scroll();
+      $(window).scroll(function(event)
+      {
+         Heading4Scroll();
+      });
+      function Heading5Scroll()
+      {
+         var $obj = $("#wb_Heading5");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('Name3', 'transform-scale-in', 100, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('Name3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Heading5').inViewPort(true))
+      {
+         $('#wb_Heading5').addClass("in-viewport");
+      }
+      Heading5Scroll();
+      $(window).scroll(function(event)
+      {
+         Heading5Scroll();
+      });
+      function Image4Scroll()
+      {
+         var $obj = $("#wb_Image4");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-in-up', 500, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('PanelImage3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Image4').inViewPort(true))
+      {
+         $('#wb_Image4').addClass("in-viewport");
+      }
+      Image4Scroll();
+      $(window).scroll(function(event)
+      {
+         Image4Scroll();
+      });
+   });
+   </script>
 </head>
 <body>
+
    
+   <div id="wb_PageHeader">
+      <div id="PageHeader">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_FontAwesomeIcon1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:0;">
+                  <a href="./index"><div id="FontAwesomeIcon1"><i class="fa fa-user-circle-o">&nbsp;</i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Heading1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+                  <h1 id="Heading1">Workshops & Seminars</h1>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_PanelMenu1" style="display:inline-block;width:63px;height:70px;z-index:2;">
+                  <a href="#PanelMenu1_markup" id="PanelMenu1">&nbsp;</a>
+                  <div id="PanelMenu1_markup">
+                     <ul>
+                        <li><a href="index"><i class="fa fa-home fa-fw">&nbsp;</i><span>Home</span></a></li>
+                        <li><a href="#"><i class="fa fa-hand-o-right fa-fw">&nbsp;</i><span>Upcoming Events</span></a></li>
+                        <li><a href="events"><i class="fa fa-th fa-fw">&nbsp;</i><span>Events</span></a></li>
+                        <li><a href="#"><i class="fa fa-text-height fa-fw">&nbsp;</i><span>Event Feedback</span></a></li>
+                        <li><a href="about"><i class="fa fa-users fa-fw">&nbsp;</i><span>About HMJSI</span></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text4">
+                  <span style="color:#000000;font-family:'Lucida Console';font-size:24px;"><strong>MEET THE TEAM<br></strong></span><span style="color:#000000;font-family:'Lucida Console';font-size:15px;">Lorem ipsum dolor sit amet, consectetur.</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_Features">
+      <div id="Features">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Image4" style="display:inline-block;width:100%;height:auto;z-index:4;">
+                  <img src="static/images/macbookkeyboard320_faded.jpg" id="Image4" alt="">
+               </div>
+               <div id="wb_Heading5" style="display:inline-block;width:100%;text-align:center;z-index:5;">
+                  <h3 id="Heading5">Jovita Zesty</h3>
+               </div>
+               <div id="wb_Text5">
+                  <span style="color:#000000;font-family:'Lucida Console';font-size:13px;">Analyst</span>
+               </div>
+               <div id="wb_FontAwesomeIcon11" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:7;">
+                  <a href="./index"><div id="FontAwesomeIcon11"><i class="fa fa-twitter">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon14" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:8;">
+                  <a href="./index"><div id="FontAwesomeIcon14"><i class="fa fa-facebook">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon17" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:9;">
+                  <a href="./index"><div id="FontAwesomeIcon17"><i class="fa fa-linkedin">&nbsp;</i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Image3" style="display:inline-block;width:100%;height:auto;z-index:10;">
+                  <img src="static/images/macbookkeyboard320_faded.jpg" id="Image3" alt="">
+               </div>
+               <div id="wb_Heading4" style="display:inline-block;width:100%;text-align:center;z-index:11;">
+                  <h3 id="Heading4">Ricky</h3>
+               </div>
+               <div id="wb_Text3">
+                  <span style="color:#000000;font-family:'Lucida Console';font-size:13px;">Project Manager</span>
+               </div>
+               <div id="wb_FontAwesomeIcon9" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:13;">
+                  <a href="./index"><div id="FontAwesomeIcon9"><i class="fa fa-twitter">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon13" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:14;">
+                  <a href="./index"><div id="FontAwesomeIcon13"><i class="fa fa-facebook">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon16" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:15;">
+                  <a href="./index"><div id="FontAwesomeIcon16"><i class="fa fa-linkedin">&nbsp;</i></div></a>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_Image2" style="display:inline-block;width:100%;height:auto;z-index:16;">
+                  <img src="static/images/macbookkeyboard320_faded.jpg" id="Image2" alt="">
+               </div>
+               <div id="wb_Heading3" style="display:inline-block;width:100%;text-align:center;z-index:17;">
+                  <h3 id="Heading3">Felix</h3>
+               </div>
+               <div id="wb_Text2">
+                  <span style="color:#000000;font-family:'Lucida Console';font-size:13px;">Front End Dev</span>
+               </div>
+               <div id="wb_FontAwesomeIcon5" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:19;">
+                  <a href="./index.html"><div id="FontAwesomeIcon5"><i class="fa fa-twitter">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon12" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:20;">
+                  <a href="./index.html"><div id="FontAwesomeIcon12"><i class="fa fa-facebook">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon15" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:21;">
+                  <a href="./index.html"><div id="FontAwesomeIcon15"><i class="fa fa-linkedin">&nbsp;</i></div></a>
+               </div>
+            </div>
+            <div class="col-4">
+               <div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:22;">
+                  <img src="static/images/macbookkeyboard320_faded.jpg" id="Image1" alt="">
+               </div>
+               <div id="wb_Heading2" style="display:inline-block;width:100%;text-align:center;z-index:23;">
+                  <h3 id="Heading2">Alvin Wijaya</h3>
+               </div>
+               <div id="wb_Text1">
+                  <span style="color:#000000;font-family:'Lucida Console';font-size:13px;">Back End Dev</span>
+               </div>
+               <div id="wb_FontAwesomeIcon2" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:25;">
+                  <a href="./index.html"><div id="FontAwesomeIcon2"><i class="fa fa-twitter">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon3" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:26;">
+                  <a href="./index.html"><div id="FontAwesomeIcon3"><i class="fa fa-facebook">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon4" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:27;">
+                  <a href="./index.html"><div id="FontAwesomeIcon4"><i class="fa fa-linkedin">&nbsp;</i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_BlockQuote">
+      <div id="BlockQuote-overlay"></div>
+      <div id="BlockQuote">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Quote">
+                  <span style="color:#000000;font-family:'Lucida Sans Unicode';font-size:16px;"><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</em></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid6">
+      <div id="LayoutGrid6-overlay"></div>
+      <div id="LayoutGrid6">
+         <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+               <div id="wb_Heading7" style="display:inline-block;width:100%;text-align:center;z-index:29;">
+                  <h1 id="Heading7">FOLLOW US</h1>
+               </div>
+               <div id="wb_FontAwesomeIcon6" style="display:inline-block;width:22px;height:22px;text-align:center;z-index:30;">
+                  <a href="./index.html"><div id="FontAwesomeIcon6"><i class="fa fa-facebook">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon7" style="display:inline-block;width:22px;height:22px;text-align:center;z-index:31;">
+                  <a href="./index.html"><div id="FontAwesomeIcon7"><i class="fa fa-twitter">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon8" style="display:inline-block;width:22px;height:22px;text-align:center;z-index:32;">
+                  <a href="./index.html"><div id="FontAwesomeIcon8"><i class="fa fa-google-plus">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon10" style="display:inline-block;width:22px;height:22px;text-align:center;z-index:33;">
+                  <a href="./index.html"><div id="FontAwesomeIcon10"><i class="fa fa-youtube">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon18" style="display:inline-block;width:22px;height:22px;text-align:center;z-index:34;">
+                  <a href="./index.html"><div id="FontAwesomeIcon18"><i class="fa fa-instagram">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon19" style="display:inline-block;width:22px;height:22px;text-align:center;z-index:35;">
+                  <a href="./index.html"><div id="FontAwesomeIcon19"><i class="fa fa-pinterest-p">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon20" style="display:inline-block;width:22px;height:22px;text-align:center;z-index:36;">
+                  <a href="./index.html"><div id="FontAwesomeIcon20"><i class="fa fa-linkedin">&nbsp;</i></div></a>
+               </div>
+            </div>
+            <div class="col-3">
+            </div>
+         </div>
+      </div>
+   </div>
 </body>
 </html>
