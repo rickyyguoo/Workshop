@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="static/font-awesome.min.css">
+    <link href="static/font-awesome.min.css" rel="stylesheet">
+	<link href="static/WEB.css" rel="stylesheet">
+	<link href="static/index.css" rel="stylesheet">
+	<script src="static/jquery-1.12.4.min.js"></script>
+	<script src="static/wb.panel.min.js"></script>
+	<script src="static/jquery-ui.min.js"></script>
+	<script src="static/wb.newsviewer.min.js"></script>
+	<script src="static/wwb12.min.js"></script>
+	<script>   
+   $(document).ready(function()
+   {
+      $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'right', toggle: true, overlay: true});
+      $("a[href*='#intro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#intro').offset().top }, 600, 'easeOutQuad');
+      });
+      function Heading2Scroll()
+      {
+         var $obj = $("#wb_Heading2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Heading1', 'vanish-in', 100, 1000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Heading1', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Heading2').inViewPort(true))
+      {
+         $('#wb_Heading2').addClass("in-viewport");
+      }
+      Heading2Scroll();
+      $(window).scroll(function(event)
+      {
+         Heading2Scroll();
+      });
+      var NewsFeedTicker1_Data = new Array();
+      NewsFeedTicker1_Data[0] = ["http://", "Welcome to HMJSI Workshops &amp; Seminars !", "", "You can view lists of workshops &amp; seminars "];
+      NewsFeedTicker1_Data[1] = ["http://", "Only at UPH Medan", "", "Proudly made by UPH Medan Student Intake 2016 , Information System."];
+      NewsFeedTicker1_Data[2] = ["http://", "We need your feedback ! ", "", "You can also give a feedback about the Workshops &amp; Seminar "];
+      $("#NewsFeedTicker1").newsviewer({ mode: 'rotate', pause: 3000, pause: 3000, animation: 1, animationDuration: 500, sortOrder: 0, dataSource: 'local', param: NewsFeedTicker1_Data, target: '_self', includeDate: false, maxItems: 10});
+   });
+</script>
+</head>
+<body>
+    <div id="wb_PageHeader">
+      <div id="PageHeader">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_FontAwesomeIcon1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:0;">
+                  <a href="./index#the_end"><div id="FontAwesomeIcon1"><i class="fa fa-user-circle-o">&nbsp;</i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Heading1" style="display:inline-block;width:100%;text-align:center;z-index:1;">
+                  <h1 id="Heading1">Workshops & Seminars</h1>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_PanelMenu1" style="display:inline-block;width:63px;height:70px;z-index:2;">
+                  <a href="#PanelMenu1_markup" id="PanelMenu1">&nbsp;</a>
+                  <div id="PanelMenu1_markup">
+                     <ul>
+                        <li><a href="index"><i class="fa fa-home fa-fw">&nbsp;</i><span>Home</span></a></li>
+                        <li><a href="#"><i class="fa fa-hand-o-right fa-fw">&nbsp;</i><span>Upcoming Events</span></a></li>
+                        <li><a href="events"><i class="fa fa-th fa-fw">&nbsp;</i><span>Events</span></a></li>
+                        <li><a href="#"><i class="fa fa-text-height fa-fw">&nbsp;</i><span>Event Feedback</span></a></li>
+                        <li><a href="#"><i class="fa fa-users fa-fw">&nbsp;</i><span>About HMJSI</span></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="intro" style="position:relative;text-align:center;width:100%;height:717px;float:left;clear:left;display:block;z-index:17;">
+      <div id="intro-overlay"></div>
+      <div id="intro_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+         <div id="wb_Heading2" style="position:absolute;left:168px;top:189px;width:618px;height:57px;text-align:center;z-index:3;">
+            <h1 id="Heading2">Welcome to Workshop View </h1></div>
+         <div id="NewsFeedTicker1" style="overflow:hidden;position:absolute;left:57px;top:292px;width:825px;height:84px;z-index:4;">
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text1">
+                  <span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><strong>INFO</strong></span>
+               </div>
+               <div id="wb_Text2">
+                  <span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>1234 Address<br>New York New York, NY 12345<br>Email: hmjsi@gmail.com<br>Phone: (061) 456-7890</strong></span>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Text3">
+                  <span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><strong>SOCIAL MEDIA</strong></span>
+               </div>
+               <div id="wb_FontAwesomeIcon2" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:8;">
+                  <a href="http://facebook.com"><div id="FontAwesomeIcon2"><i class="fa fa-facebook">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon3" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:9;">
+                  <a href="./index.html"><div id="FontAwesomeIcon3"><i class="fa fa-twitter">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon4" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:10;">
+                  <a href="./index.html"><div id="FontAwesomeIcon4"><i class="fa fa-pinterest">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon5" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:11;">
+                  <a href="./index.html"><div id="FontAwesomeIcon5"><i class="fa fa-instagram">&nbsp;</i></div></a>
+               </div>
+               <div id="wb_FontAwesomeIcon6" style="display:inline-block;width:16px;height:16px;text-align:center;z-index:12;">
+                  <a href="./index.html"><div id="FontAwesomeIcon6"><i class="fa fa-youtube">&nbsp;</i></div></a>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_Text5">
+                  <span style="color:#FFFFFF;font-family:Arial;font-size:19px;"><strong>ABOUT ME</strong></span>
+               </div>
+               <div id="wb_Text4">
+                  <span style="color:#FFFFFF;font-family:Arial;font-size:16px;"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</strong></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid2">
+      <div id="LayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text6">
+                  <span style="color:#FFFFFF;font-family:Arial;font-size:13px;">Copyright © Footer 2017. All right reserved. </span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
