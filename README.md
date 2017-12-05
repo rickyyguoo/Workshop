@@ -30,3 +30,5 @@ IF YOU WANT TO OPEN IT VIA BROWSER
 
 1. Make sure you have the latest version of browser installed such as Firefox Quantum , Google Chrome ver.62
 2. Don't open from an outdated version of browser such as internet explorer unless you want to waste your time !
+3. Open https://viewevents.herokuapp.com 
+4. Enjoy!
