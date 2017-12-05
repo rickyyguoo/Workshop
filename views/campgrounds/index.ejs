@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+    <header class="jumbotron">
+        <div class="container">
+            <h1></span>List of Events!</h1>
+            <p>Don't forget to give a feedback!</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/campgrounds/new">New Events</a>
+            </p>
+            <p>
+                <form action="/campgrounds" method="GET" class="form-inline waves-effect waves-light" id="campground-search">
+                    <div class="form-group">
+                        <input type="text" name="search" placeholder="Search events here" class="form-control mr-sm-2">
+                    </div>
+                </form>
+            </p>
+        </div>
+    </header>
+    <div class="row text-center flex-wrap" id="campground-grid">
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= campground.image %>" class="hoverable">
+                    <div class="caption">
+                        <h4><%= campground.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+            <% }); %>
+    </div>
