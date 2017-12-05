@@ -1,4 +1,4 @@
-#Welcome to Workshop&Seminar view
+WELCOME TO WORKSHOP & SEMINAR VIEW
 
 IF YOU WANT TO OPEN IT LOCALLY
 =================================
