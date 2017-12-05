@@ -1,6 +1,5 @@
 #Welcome to Workshop&Seminar view
 
-=================================
 IF YOU WANT TO OPEN IT LOCALLY
 =================================
 
@@ -25,7 +24,7 @@ After nodejs installed :
 2. type "cd + 'your downloaded files location'" for ex : "cd C:\Users\admin\Desktop\UPH\TERM 4\WEB PROGRAMMING 2\web\viewevents"
 3. type nodejs app.js
 
-===================================
+
 IF YOU WANT TO OPEN IT VIA BROWSER 
 ===================================
 
