@@ -1,24 +1,33 @@
- 													 _    _ _____ _     _____ ________  ________ 
-													| |  | |  ___| |   /  __ |  _  |  \/  |  ___|
-													| |  | | |__ | |   | /  \| | | | .  . | |__  
-													| |/\| |  __|| |   | |   | | | | |\/| |  __| 
-													\  /\  | |___| |___| \__/\ \_/ | |  | | |___ 
-													 \/  \/\____/\_____/\____/\___/\_|  |_\____/ 
+#Welcome to Workshop&Seminar view
 
+=================================
+IF YOU WANT TO OPEN IT LOCALLY
+=================================
 
+Steps if you don't have yarn installed : 
+1. Open https://yarnpkg.com/en/docs/install
+2. Choose your platform
+3. Install
 
+After Yarn installed , follow this steps :
+1. Open CMD ( Command Prompt ) /  Win+R then type "cmd"
+2. type "cd + 'your downloaded files location'" for ex : "cd C:\Users\admin\Desktop\UPH\TERM 4\WEB PROGRAMMING 2\web\viewevents"
+3. then type "yarn add 'modules' for ex : yarn add mysql"
+4. node_modules will be automatically installed.
 
-=====================================================================================================================================================
- __      __             __          .__                      ____      _________              .__                      ____   ___.__               
-/  \    /  \___________|  | __ _____|  |__   ____ ______    /  _ \    /   _____/ ____   _____ |__| ____ _____ _______  \   \ /   |__| ______  _  __
-\   \/\/   /  _ \_  __ |  |/ //  ___|  |  \ /  _ \\____ \   >  _ </\  \_____  \_/ __ \ /     \|  |/    \\__  \\_  __ \  \   Y   /|  _/ __ \ \/ \/ /
- \        (  <_> |  | \|    < \___ \|   Y  (  <_> |  |_> > /  <_\ \/  /        \  ___/|  Y Y  |  |   |  \/ __ \|  | \/   \     / |  \  ___/\     / 
-  \__/\  / \____/|__|  |__|_ /____  |___|  /\____/|   __/  \_____\ \ /_______  /\___  |__|_|  |__|___|  (____  |__|       \___/  |__|\___  >\/\_/  
-       \/                   \/    \/     \/       |__|            \/         \/     \/      \/        \/     \/                          \/        
-=====================================================================================================================================================
+Steps if you don't have nodejs installed :
+1. Open https://nodejs.org/en/download/
+2. Choose LTS (Recommended version) / 8.9.1version
+3. Then download and install
 
-			
-1.
-                                             
-                                             
+After nodejs installed :
+1. Open CMD ( Command Prompt ) /  Win+R then type "cmd"
+2. type "cd + 'your downloaded files location'" for ex : "cd C:\Users\admin\Desktop\UPH\TERM 4\WEB PROGRAMMING 2\web\viewevents"
+3. type nodejs app.js
 
+===================================
+IF YOU WANT TO OPEN IT VIA BROWSER 
+===================================
+
+1. Make sure you have the latest version of browser installed such as Firefox Quantum , Google Chrome ver.62
+2. Don't open from an outdated version of browser such as internet explorer unless you want to waste your time !
