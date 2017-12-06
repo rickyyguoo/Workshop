@@ -1,7 +1,10 @@
 WELCOME TO WORKSHOP & SEMINAR VIEW
+=====================================
+
+https://viewevents.herokuapp.com
 
 IF YOU WANT TO OPEN IT LOCALLY
-=================================
+=====================================
 
 Steps if you don't have yarn installed : 
 1. Open https://yarnpkg.com/en/docs/install
@@ -26,7 +29,7 @@ After nodejs installed :
 
 
 IF YOU WANT TO OPEN IT VIA BROWSER 
-===================================
+=====================================
 
 1. Make sure you have the latest version of browser installed such as Firefox Quantum , Google Chrome ver.62
 2. Don't open from an outdated version of browser such as internet explorer unless you want to waste your time !
