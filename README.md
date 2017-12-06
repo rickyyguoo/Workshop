@@ -3,8 +3,8 @@ WELCOME TO WORKSHOP & SEMINAR VIEW
 
 https://viewevents.herokuapp.com
 
-IF YOU WANT TO OPEN IT LOCALLY
-=====================================
+IF YOU WANT TO OPEN IT LOCALLY via localhost 
+=============================================
 
 Steps if you don't have yarn installed : 
 1. Open https://yarnpkg.com/en/docs/install
@@ -27,6 +27,7 @@ After nodejs installed :
 2. type "cd + 'your downloaded files location'" for ex : "cd C:\Users\admin\Desktop\UPH\TERM 4\WEB PROGRAMMING 2\web\viewevents"
 3. type nodejs app.js
 
+Note : opening via localhost requires internet too ! because we uses geocoder to post the exact location and the database uses internet connection too!
 
 IF YOU WANT TO OPEN IT VIA BROWSER 
 =====================================
