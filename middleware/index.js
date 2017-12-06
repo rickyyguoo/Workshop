@@ -1,5 +1,5 @@
 var Comment = require("../models/comment");
-var Campground = require("../models/campground");
+var Viewevent = require("../models/viewevent");
 module.exports = {
     isLoggedIn: function(req, res, next){
         if(req.isAuthenticated()){
@@ -8,15 +8,15 @@ module.exports = {
         req.flash("error", "Please Sign in! or Sign Up to create Events / Comments !");
         res.redirect("/login");
     },
-    checkUserCampground: function(req, res, next){
+    checkUserViewevent: function(req, res, next){
         if(req.isAuthenticated()){
-            Campground.findById(req.params.id, function(err, campground){
-               if(campground.author.id.equals(req.user._id) || req.user.isAdmin){
+            Viewevent.findById(req.params.id, function(err, viewevent){
+               if(viewevent.author.id.equals(req.user._id) || req.user.isAdmin){
                    next();
                } else {
                    req.flash("error", "You don't have permission to do that!");
                    console.log("Not Good");
-                   res.redirect("/campgrounds/" + req.params.id);
+                   res.redirect("/viewevents/" + req.params.id);
                }
             });
         } else {
@@ -32,7 +32,7 @@ module.exports = {
                    next();
                } else {
                    req.flash("error", "You don't have permission to do that!");
-                   res.redirect("/campgrounds/" + req.params.id);
+                   res.redirect("/viewevents/" + req.params.id);
                }
             });
         } else {

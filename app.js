@@ -6,7 +6,7 @@ const express = require('express'),
     cookieParser = require("cookie-parser"),
     LocalStrategy = require("passport-local"),
     flash = require("connect-flash"),
-    Campground = require("./models/campground"),
+    Viewevent = require("./models/viewevent"),
     Comment = require("./models/comment"),
     User = require("./models/user"),
     session = require("express-session"),
@@ -18,7 +18,7 @@ require('dotenv').load();
 const http = express();
 
 const commentRoutes = require("./routes/comments"),
-    campgroundRoutes = require("./routes/campgrounds"),
+    vieweventRoutes = require("./routes/viewevents"),
     indexRoutes = require("./routes/index")
 
 const URL = process.env.DATABASEURL || "mongodb://ricky:ricky@ds251435.mlab.com:51435/workshop"
@@ -56,8 +56,8 @@ http.use(function(req, res, next) {
 
 
 http.use("/", indexRoutes);
-http.use("/campgrounds", campgroundRoutes);
-http.use("/campgrounds/:id/comments", commentRoutes);
+http.use("/viewevents", vieweventRoutes);
+http.use("/viewevents/:id/comments", commentRoutes);
 
 
 http.set('view engine', 'ejs');
@@ -81,6 +81,12 @@ http.get('/events', (req, res) => {
 http.get('/about', (req, res) => {
     res.render('about');
 });
+
+http.get('/viewevents', (req, res) => {
+    res.render('viewevents');
+});
+
+
 
 const PORT = process.env.PORT || 3000
 http.listen(PORT, () => {

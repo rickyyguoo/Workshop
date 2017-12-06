@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+    <header class="jumbotron">
+        <div class="container">
+            <h1></span>List of Events!</h1>
+            <p>Don't forget to give a feedback!</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/viewevents/new">New Events</a>
+            </p>
+        </div>
+    </header>
+    <div class="row text-center flex-wrap" id="viewevent-grid">
+        <% viewevents.forEach(function(viewevent){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= viewevent.image %>" class="hoverable">
+                    <div class="caption">
+                        <h4><%= viewevent.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/viewevents/<%= viewevent._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+            <% }); %>
+    </div>

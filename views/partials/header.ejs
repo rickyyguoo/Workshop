@@ -27,37 +27,7 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark grey" role="navigation">
-      <div class="container">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              
-          </div>
-            <ul class="nav navbar-nav">
-              <li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds">Events</a></li>
-              <li><a href="/home">Home</a></li>
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <% if(!currentUser){ %>
-                    <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
-                    <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register">Sign Up</a></li>
-                <% } else { %>
-                    <li><a href="#">Hi ! <%= currentUser.username %></a></li>
-                    <li><a href="/logout">Logout</a></li>
-                <% } %>
-                       
-                
-            </ul>
-          </div>
-      </div>
-  </nav> -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark orange">
         <div class="container">
             <!-- Navbar brand -->
@@ -70,18 +40,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Links -->
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item <%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>">
-                        <a class="nav-link waves-effect waves-light" href="/campgrounds">Events
+                    <li class="nav-item <%= typeof page !== 'undefined' && page === 'viewevents' ? 'active' : '' %>">
+                        <a class="nav-link waves-effect waves-light" href="/viewevents">Events
                 </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link waves-effect waves-light" href="/home">Home
                 </a>
                     </li>
-                    <!-- Dropdown -->
+                 
                 </ul>
-                <!-- Links -->
-                <!-- Search form -->
+    
                 <div>
                     <ul class="nav navbar-nav navbar-right ">
                         <% if(!currentUser){ %>
@@ -107,7 +76,7 @@
         </div>
     </nav>
     </div>
-    <!-- Collapsible content -->
+
     </div>
     </nav>
     <!--/.Navbar-->

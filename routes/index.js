@@ -2,7 +2,7 @@ var express = require("express");
 var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
-var Campground = require("../models/campground");
+var Viewevent = require("../models/viewevent");
 
 //root route
 router.get("/", function(req, res){
@@ -35,7 +35,7 @@ router.post("/register", function(req, res){
         }
         passport.authenticate("local")(req, res, function(){
            req.flash("success", "Successfully Signed Up! Nice to meet you " + req.body.username);
-           res.redirect("/campgrounds"); 
+           res.redirect("/viewevents"); 
         });
     });
 });
@@ -48,7 +48,7 @@ router.get("/login", function(req, res){
 //handling login logic
 router.post("/login", passport.authenticate("local", 
     {
-        successRedirect: "/campgrounds",
+        successRedirect: "/viewevents",
         failureRedirect: "/login",
         failureFlash: true,
         successFlash: 'Welcome to Seminar View ! You can add events or post a feedback !'
@@ -59,7 +59,7 @@ router.post("/login", passport.authenticate("local",
 router.get("/logout", function(req, res){
    req.logout();
    req.flash("success", "Have a nice day!");
-   res.redirect("/campgrounds");
+   res.redirect("/viewevents");
 });
 
 // USER PROFILE
@@ -69,12 +69,12 @@ router.get("/users/:id", function(req, res) {
       req.flash("error", "Something went wrong.");
       res.redirect("/");
     }
-    Campground.find().where('author.id').equals(foundUser._id).exec(function(err, campgrounds) {
+    Viewevent.find().where('author.id').equals(foundUser._id).exec(function(err, viewevents) {
       if(err) {
         req.flash("error", "Something went wrong.");
         res.redirect("/");
       }
-      res.render("users/show", {user: foundUser, campgrounds: campgrounds});
+      res.render("users/show", {user: foundUser, viewevents: viewevents});
     })
   });
 });

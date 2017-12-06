@@ -14,10 +14,10 @@
         <div class="col-md-8">
             <h3><%= user.username %>'s events:</h3>
             <ul>
-                <% campgrounds.forEach(function(campground) { %>
+                <% viewevents.forEach(function(viewevent) { %>
                     <li>
-                        <a href="/campgrounds/<%= campground.id %>">
-                            <%= campground.name %>
+                        <a href="/viewevents/<%= viewevent.id %>">
+                            <%= viewevent.name %>
                         </a>
                     </li>
                     <% }); %>

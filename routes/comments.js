@@ -1,29 +1,29 @@
 var express = require("express");
 var router  = express.Router({mergeParams: true});
-var Campground = require("../models/campground");
+var Viewevent = require("../models/viewevent");
 var Comment = require("../models/comment");
 var middleware = require("../middleware");
 
 //Comments New
 router.get("/new", middleware.isLoggedIn, function(req, res){
-    // find campground by id
+    // find viewevents by id
     console.log(req.params.id);
-    Campground.findById(req.params.id, function(err, campground){
+    Viewevent.findById(req.params.id, function(err, viewevent){
         if(err){
             console.log(err);
         } else {
-             res.render("comments/new", {campground: campground});
+             res.render("comments/new", {viewevent: viewevent});
         }
     })
 });
 
 //Comments Create
 router.post("/",middleware.isLoggedIn,function(req, res){
-   //lookup campground using ID
-   Campground.findById(req.params.id, function(err, campground){
+   //lookup viewevents using ID
+   Viewevent.findById(req.params.id, function(err, viewevent){
        if(err){
            console.log(err);
-           res.redirect("/campgrounds");
+           res.redirect("/viewevents");
        } else {
         Comment.create(req.body.comment, function(err, comment){
            if(err){
@@ -34,11 +34,11 @@ router.post("/",middleware.isLoggedIn,function(req, res){
                comment.author.username = req.user.username;
                //save comment
                comment.save();
-               campground.comments.push(comment);
-               campground.save();
+               viewevent.comments.push(comment);
+               viewevent.save();
                console.log(comment);
                req.flash('success', 'Feedback/Comment Posted');
-               res.redirect('/campgrounds/' + campground._id);
+               res.redirect('/viewevents/' + viewevent._id);
            }
         });
        }
@@ -46,12 +46,12 @@ router.post("/",middleware.isLoggedIn,function(req, res){
 });
 
 router.get("/:commentId/edit", middleware.isLoggedIn, function(req, res){
-    // find campground by id
+    // find viewevents by id
     Comment.findById(req.params.commentId, function(err, comment){
         if(err){
             console.log(err);
         } else {
-             res.render("comments/edit", {campground_id: req.params.id, comment: comment});
+             res.render("comments/edit", {viewevent_id: req.params.id, comment: comment});
         }
     })
 });
@@ -62,7 +62,7 @@ router.put("/:commentId", function(req, res){
           console.log(err);
            res.render("edit");
        } else {
-           res.redirect("/campgrounds/" + req.params.id);
+           res.redirect("/viewevents/" + req.params.id);
        }
    }); 
 });
@@ -72,7 +72,7 @@ router.delete("/:commentId",middleware.checkUserComment, function(req, res){
         if(err){
             console.log(err);
         } else {
-            Campground.findByIdAndUpdate(req.params.id, {
+            Viewevent.findByIdAndUpdate(req.params.id, {
               $pull: {
                 comments: comment.id
               }
@@ -81,7 +81,7 @@ router.delete("/:commentId",middleware.checkUserComment, function(req, res){
                 console.log(err)
               } else {
                 req.flash('error', 'Feedback/Comment deleted!');
-                res.redirect("/campgrounds/" + req.params.id);
+                res.redirect("/viewevents/" + req.params.id);
               }
             });
         }
